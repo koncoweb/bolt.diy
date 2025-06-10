@@ -1,14 +1,14 @@
 {
-  "name": "bolt",
-  "description": "An AI Agent",
+  "name": "konco-ai",
+  "description": "Konco AI - Your Smart AI Assistant",
   "private": true,
   "license": "MIT",
   "sideEffects": false,
   "type": "module",
   "version": "1.0.0",
   "author": {
-    "name": "bolt.diy team",
-    "email": "maintainers@bolt.diy"
+    "name": "Konco AI Team",
+    "email": "team@konco.ai"
   },
   "scripts": {
     "deploy": "npm run build && wrangler pages deploy",
