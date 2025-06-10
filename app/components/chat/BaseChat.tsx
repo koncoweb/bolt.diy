@@ -348,7 +348,7 @@ export const BaseChat = React.forwardRef<HTMLDivElement, BaseChatProps>(
                   Konco AI
                 </h1>
                 <p className="text-md lg:text-xl mb-8 text-bolt-elements-textSecondary animate-fade-in animation-delay-200">
-                  Bring ideas to life in seconds or get help on existing projects.
+                  mulai buat aplikasimu dengan Bantuan AI tinggal perintah di bawah ini
                 </p>
               </div>
             )}

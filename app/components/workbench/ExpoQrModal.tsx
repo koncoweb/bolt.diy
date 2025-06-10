@@ -33,8 +33,8 @@ export const ExpoQrModal: React.FC<ExpoQrModalProps> = ({ open, onClose }) => {
                 logoImage="/logos.svg"
                 removeQrCodeBehindLogo={true}
                 logoPadding={3}
-                logoHeight={50}
-                logoWidth={50}
+                logoHeight={30}
+                logoWidth={30}
                 logoPaddingStyle="square"
                 style={{
                   borderRadius: 16,

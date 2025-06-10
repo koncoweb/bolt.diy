@@ -11,7 +11,12 @@ export const PROMPT_COOKIE_KEY = 'cachedPrompt';
 
 const llmManager = LLMManager.getInstance(import.meta.env);
 
-export const PROVIDER_LIST = llmManager.getAllProviders();
+// Daftar provider yang ingin disembunyikan dari UI dropdown
+const HIDDEN_PROVIDERS = ['bedrock', 'perplexity', 'cohere', 'xai'];
+
+// Mendapatkan semua provider lalu memfilter yang tidak ingin ditampilkan
+const allProviders = llmManager.getAllProviders();
+export const PROVIDER_LIST = allProviders.filter(provider => !HIDDEN_PROVIDERS.includes(provider.name));
 export const DEFAULT_PROVIDER = llmManager.getDefaultProvider();
 
 export const providerBaseUrlEnvKeys: Record<string, { baseUrlKey?: string; apiTokenKey?: string }> = {};
