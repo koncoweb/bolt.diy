@@ -63,9 +63,14 @@ export const ModelSelector = ({
         model.name.toLowerCase().includes(modelSearchQuery.toLowerCase()),
     );
 
-  const filteredProviders = providerList.filter((p) =>
-    p.name.toLowerCase().includes(providerSearchQuery.toLowerCase()),
-  );
+  // Provider yang disembunyikan dari UI
+  const hiddenProviders = ['bedrock', 'cohere', 'mistral', 'groq', 'xai', 'amazonbedrock'];
+  
+  // Filter provider berdasarkan pencarian dan daftar yang disembunyikan
+  const filteredProviders = providerList
+    .filter((p) => !hiddenProviders.some(hidden => p.name.toLowerCase().includes(hidden)))
+    .filter((p) => p.name.toLowerCase().includes(providerSearchQuery.toLowerCase()));
+  
 
   useEffect(() => {
     setFocusedModelIndex(-1);
